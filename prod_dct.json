@@ -1,0 +1,13 @@
+{"No CAD":
+         {"snap_prefix": "Office", "prod_prefix": "EFD.LAB-"},
+ "SolidWorks":
+         {"snap_prefix": "SW 20", "prod_prefix": "CFW-"},
+ "Creo":
+         {"snap_prefix": "Creo", "prod_prefix": "EFD.PRO-"},
+ "Catia":
+         {"snap_prefix": "Catia", "prod_prefix": "EFD.V5-"},
+ "NX":
+         {"snap_prefix": "NX", "prod_prefix": "EFD.NX-"},
+ "SolidEdge":
+         {"snap_prefix": "Solid Edge", "prod_prefix": "EFD.SE-"}
+}

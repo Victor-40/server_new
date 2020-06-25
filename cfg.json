@@ -1,0 +1,23 @@
+{ "root_dir": "\\\\svr-rum-net-04\\new_versions",
+  "build":    "4775",
+  "tag":      "efd_dev.4775_25.10.2019",
+  "prod_dirs": ["CFW-2020",
+                "CFW-2021",
+                "EFD.LAB-2019",
+                "EFD.LAB-2020",
+                "EFD.NX-2019",
+                "EFD.NX-2020",
+                "EFD.PRO-2019",
+                "EFD.PRO-2020",
+                "EFD.SE-2019",
+                "EFD.SE-2020",
+                "EFD.V5-2019",
+                "EFD.V5-2020"],
+  "prod_snaps": { "CFW":      "SW",
+                  "EFD.LAB":  "Office",
+                  "EFD.NX":   "NX",
+                  "EFD.PRO":  "Creo",
+                  "EFD.SE":   "Solid",
+                  "EFD.V5":   "Catia"
+              }
+}
