@@ -9,6 +9,7 @@ import subprocess
 import sys
 from win32com import client
 import pythoncom
+import time
 
 # configuration
 DEBUG = True
@@ -171,15 +172,18 @@ def makexls():
 @app.route('/api/startclear', methods=['POST'])
 def start_clear():
     post_data = request.get_json()
-    print(post_data)
+    # print(post_data)
 
     vm_name = post_data['vm']
     vm_path = all_cfg_dct[vm_name]['path']
     snapshot = post_data['snap']
 
     vm = host.open_vm(vm_path)
+    if vm.is_running:
+        return jsonify("ERROR: VM %s is already running" % vm_name)
     work_snapshot = vm.snapshot_get_named(snapshot)
     vm.snapshot_revert(work_snapshot)
+    time.sleep(1)
     vm.power_on(launch_gui=True)
 
     return jsonify("VM %s was started" % vm_name)
