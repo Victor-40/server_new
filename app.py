@@ -56,9 +56,14 @@ conn.close()
 host = vix.VixHost(service_provider=3)
 
 
-def find_builds(build, tag, _prod, subdir, _vs2017):
+def find_builds(_dirname, _prod, subdir, _vs2017):
+    pattern_in = re.compile(r'.*-(\d{4})(?:_x64)*__(.*)$', re.I)
+    matches = re.search(pattern_in, _dirname)
+    build = matches.group(1)
+    tag = matches.group(2)
+    # print(build, tag)
 
-    patt = re.compile(r'-%s(_x64)*__(git--)*%s$' % (build, tag), re.I)
+    pattern_out = re.compile(r'-%s(?:_x64)*__*%s$' % (build, tag), re.I)
 
     work_prod = list()
     for i in _prod:
@@ -78,7 +83,7 @@ def find_builds(build, tag, _prod, subdir, _vs2017):
         if os.path.exists(_dir):
             obj = os.scandir(_dir)
             for item in obj:
-                if re.search(patt, item.name):
+                if re.search(pattern_out, item.name):
                     setups.append(item.path)
     return setups
 
@@ -152,8 +157,8 @@ def all_books():
 def find_setups():
     if request.method == 'POST':
         post_data = request.get_json()
-        # print(post_data)
-        response_object = find_builds(post_data['build'], post_data['tag'], post_data['products'], post_data['subdir'],
+        print(post_data)
+        response_object = find_builds(post_data['dirname'], post_data['products'], post_data['subdir'],
                                       post_data['vs2017'])
     else:
         response_object = ['get']
