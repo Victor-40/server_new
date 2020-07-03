@@ -88,16 +88,21 @@ def find_builds(_dirname, _prod, subdir, _vs2017):
     return setups
 
 
-def make_xls(setups):
+def make_xls(params):
+    # print("params", params)
+    setups = params["setups"]
     result = list()
 
     for _setup in setups:
-        setup_prefix = os.path.basename(_setup).split('-')[0]
+        setup_prefix = os.path.basename(_setup).split('-')[0] + '-'
 
-        for vm_name, vm_path, vm_snap, _, prod_prefix, production, _ in all_recs:
+        selected = [item for item in all_recs if item[4] == setup_prefix]
+        selected = [item for item in selected if item[5] == '1']
+        selected = [item for item in selected if item[3] in params["lang"]]
+        selected = [item for item in selected if item[0].split(' ')[1] in params["win"]]
 
-            if prod_prefix.startswith(setup_prefix) and production == "1":
-                result.append((_setup,  vm_name, vm_path,  vm_snap, "0"))
+        for vm_name, vm_path, vm_snap, _, _, _, _ in selected:
+            result.append((_setup,  vm_name, vm_path,  vm_snap, "0"))
 
     job_file = r'd:\Testing\VMWare\VM-Monitor.Jobs.xls'
     if os.path.exists(job_file):
@@ -157,7 +162,7 @@ def all_books():
 def find_setups():
     if request.method == 'POST':
         post_data = request.get_json()
-        print(post_data)
+        # print("find-setups", post_data)
         response_object = find_builds(post_data['dirname'], post_data['products'], post_data['subdir'],
                                       post_data['vs2017'])
     else:
@@ -169,6 +174,7 @@ def find_setups():
 @app.route('/api/makexls', methods=['POST'])
 def makexls():
     post_data = request.get_json()
+    print('request', post_data)
     response_object = make_xls(post_data)
 
     return jsonify(response_object)
