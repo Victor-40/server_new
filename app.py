@@ -56,7 +56,7 @@ conn.close()
 host = vix.VixHost(service_provider=3)
 
 
-def find_builds(_dirname, _prod, subdir, _vs2017):
+def find_builds(_dirname, _prod, subdir, _vs2019):
     pattern_in = re.compile(r'.*-(\d{4})(?:_x64)*__(.*)$', re.I)
     matches = re.search(pattern_in, _dirname)
     build = matches.group(1)
@@ -72,9 +72,9 @@ def find_builds(_dirname, _prod, subdir, _vs2017):
             if prefix.startswith(i):
                 work_prod.append(prefix)
 
-    # vs2017 only
-    if _vs2017:
-        work_prod = ["vs2017_" + x for x in work_prod]
+    # vs2019 only
+    if _vs2019:
+        work_prod = ["vs2019_" + x for x in work_prod]
 
     search_dirs = [os.path.join(root_nv, item, subdir) for item in work_prod]
     setups = list()
@@ -127,6 +127,19 @@ def make_xls(params):
     wb.Close()
     pythoncom.CoUninitialize()
 
+    # make info-file
+
+    root_path = r'd:\testing\test'
+    os.chdir(root_path)
+    new_info = params['report']
+    if new_info:
+        new_info_name = new_info + '.info'
+        for item in os.scandir():
+            if item.name.endswith('.info'):
+                os.remove(item.name)
+
+        open(new_info_name, 'a').close()
+
     return result
 
 
@@ -164,7 +177,7 @@ def find_setups():
         post_data = request.get_json()
         # print("find-setups", post_data)
         response_object = find_builds(post_data['dirname'], post_data['products'], post_data['subdir'],
-                                      post_data['vs2017'])
+                                      post_data['vs2019'])
     else:
         response_object = ['get']
 
@@ -174,7 +187,7 @@ def find_setups():
 @app.route('/api/makexls', methods=['POST'])
 def makexls():
     post_data = request.get_json()
-    print('request', post_data)
+    # print('request', post_data)
     response_object = make_xls(post_data)
 
     return jsonify(response_object)
