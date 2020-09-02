@@ -23,7 +23,7 @@ CORS(app, resources={r'/api/*': {'origins': '*'}})
 # CORS(app)
 
 root_nv = r'\\svr-rum-net-04\new_versions'
-root_host_test = r'D:\Testing\Test-1'
+root_host_test = r'e:\Testing\Test-1'
 root_guest_test = r'c:\Test'
 root_report = r'\\rum-cherezov-dt\!Reports'
 db_path = r'c:\production_svelte\server_new\db.sqlite3'
@@ -104,7 +104,7 @@ def make_xls(params):
         for vm_name, vm_path, vm_snap, _, _, _, _ in selected:
             result.append((_setup,  vm_name, vm_path,  vm_snap, "0"))
 
-    job_file = r'd:\Testing\VMWare\VM-Monitor.Jobs.xls'
+    job_file = r'e:\Testing\VMWare\VM-Monitor.Jobs.xls'
     if os.path.exists(job_file):
         os.remove(job_file)
     pythoncom.CoInitialize()
@@ -129,7 +129,7 @@ def make_xls(params):
 
     # make info-file
 
-    root_path = r'd:\testing\test'
+    root_path = r'e:\testing\test'
     os.chdir(root_path)
     new_info = params['report']
     if new_info:
@@ -221,7 +221,7 @@ def all_cfg():
 
 @app.route('/api/start_testset', methods=['GET'])
 def start_testset():
-    subprocess.call([r'd:\Testing\VMWare\start_auto.bat'])
+    subprocess.call([r'e:\Testing\VMWare\start_auto.bat'])
     return jsonify('OK! Testset started')
 
 
