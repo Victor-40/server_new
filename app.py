@@ -35,7 +35,7 @@ prod_cfg_dct = dict()
 conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
-res = cursor.execute("SELECT vm_name, vm_path, vm_snap, lang, prod_prefix, production, cad FROM fenix_maindb")
+res = cursor.execute("SELECT vm_name, vm_path, vm_snap, lang, prod_prefix, production, cad FROM fenix_maindb WHERE show = 1")
 all_recs = res.fetchall()
 
 cursor = conn.cursor()
