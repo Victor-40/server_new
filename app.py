@@ -3,13 +3,15 @@ from flask_cors import CORS
 import json
 import os
 import re
-import sqlite3
 import vix
 import subprocess
 import sys
 from win32com import client
 import pythoncom
 import time
+
+from pprint import pprint
+from pymongo import MongoClient
 
 # configuration
 DEBUG = True
@@ -26,32 +28,36 @@ root_nv = r'\\svr-rum-net-04\new_versions'
 root_host_test = r'e:\Testing\Test-1'
 root_guest_test = r'c:\Test'
 root_report = r'\\rum-cherezov-dt\!Reports'
-db_path = r'c:\production_svelte\server_new\db.sqlite3'
-snapshot_dct = dict()
+
 all_cfg_dct = dict()
-prod_cfg_dct = dict()
 
-# ---- DB ----
-conn = sqlite3.connect(db_path)
-cursor = conn.cursor()
+client_mongo = MongoClient()
+db = client_mongo.test
+collection = db.main
 
-res = cursor.execute("SELECT vm_name, vm_path, vm_snap, lang, prod_prefix, production, cad FROM fenix_maindb WHERE show = 1")
-all_recs = res.fetchall()
+# only show=1
+pipeline = [{"$project": {"vm": 1, "lang": 1, "path": 1, "_id": 0, "snaplist": 1}},
+            {"$unwind": {"path": "$snaplist"}},
+            {"$match": {"snaplist.show": 1}},
+            {"$group": {"_id": "$vm", "lang": {"$first": "$lang"}, "path": {"$first": "$path"},
+                        "sn": {"$push": "$snaplist.snap"}}}]
 
-cursor = conn.cursor()
-full_prod = cursor.execute("SELECT prod_root FROM prod_dirs").fetchall()
 
-for vm, path, snap, lang, prefix, production, cad in all_recs:
-    if vm in all_cfg_dct:
-        all_cfg_dct[vm]['snap'].append(snap)
-    else:
-        all_cfg_dct[vm] = {'path': path, 'lang': lang, 'snap': [snap]}
+for item in db.main.aggregate(pipeline):
+    all_cfg_dct[item["_id"]] = {"lang": item["lang"], "path": item["path"], "snap": sorted(item['sn'])}
 
-for item in all_cfg_dct:
-    all_cfg_dct[item]['snap'] = sorted(all_cfg_dct[item]['snap'])
+# production = 1
+pipeline = [{"$unwind": {"path": "$snaplist"}},
+            {"$match": {"snaplist.production": 1}}]
+production_lst = list(db.main.aggregate(pipeline))
 
-conn.close()
-# ---- end DB ----
+
+# where find setups
+collection = db.prod_dirs
+
+all_prod_dirs = collection.find_one()['dirs']
+
+##############################  end mongo  ##########################################
 
 host = vix.VixHost(service_provider=3)
 
@@ -67,10 +73,9 @@ def find_builds(_dirname, _prod, subdir, _vs2019):
 
     work_prod = list()
     for i in _prod:
-        for j in full_prod:
-            prefix, = j
-            if prefix.startswith(i):
-                work_prod.append(prefix)
+        for prod_dir in all_prod_dirs:
+            if prod_dir.startswith(i):
+                work_prod.append(prod_dir)
 
     # vs2019 only
     if _vs2019:
@@ -90,19 +95,18 @@ def find_builds(_dirname, _prod, subdir, _vs2019):
 
 def make_xls(params):
     # print("params", params)
-    setups = params["setups"]
+    setups = params['setups']
     result = list()
 
     for _setup in setups:
         setup_prefix = os.path.basename(_setup).split('-')[0] + '-'
 
-        selected = [item for item in all_recs if item[4] == setup_prefix]
-        selected = [item for item in selected if item[5] == '1']
-        selected = [item for item in selected if item[3] in params["lang"]]
-        selected = [item for item in selected if item[0].split(' ')[1] in params["win"]]
+        selected = [item for item in production_lst if item['snaplist']['prefix'] == setup_prefix]
+        selected = [item for item in selected if item['lang'] in params['lang']]
+        selected = [item for item in selected if item['winver'] in params["win"]]
 
-        for vm_name, vm_path, vm_snap, _, _, _, _ in selected:
-            result.append((_setup,  vm_name, vm_path,  vm_snap, "0"))
+        for item in selected:
+            result.append((_setup,  item['vm'], item['path'],  item['snaplist']['snap'], '0'))
 
     job_file = r'e:\Testing\VMWare\VM-Monitor.Jobs.xls'
     if os.path.exists(job_file):
@@ -215,7 +219,6 @@ def start_clear():
 
 @app.route('/api/allcfg', methods=['GET'])
 def all_cfg():
-    # print(snapshot_dct)
     return jsonify(all_cfg_dct)
 
 
