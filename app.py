@@ -10,8 +10,6 @@ from win32com import client
 import pythoncom
 import time
 
-from pprint import pprint
-from pymongo import MongoClient
 
 # configuration
 DEBUG = True
@@ -28,34 +26,36 @@ root_nv = r'\\svr-rum-net-04\new_versions'
 root_host_test = r'e:\Testing\Test-1'
 root_guest_test = r'c:\Test'
 root_report = r'\\rum-cherezov-dt\!Reports'
+job_file = r'e:\Testing\VMWare\VM-Monitor.Jobs.xls'
 
 all_cfg_dct = dict()
 
-client_mongo = MongoClient()
-db = client_mongo.test
-collection = db.main
+with open(r'c:\production_svelte\server_new\cfg\main_db.json') as fi:
+    origin = json.load(fi)
 
-# only show=1
-pipeline = [{"$project": {"vm": 1, "lang": 1, "path": 1, "_id": 0, "snaplist": 1}},
-            {"$unwind": {"path": "$snaplist"}},
-            {"$match": {"snaplist.show": 1}},
-            {"$group": {"_id": "$vm", "lang": {"$first": "$lang"}, "path": {"$first": "$path"},
-                        "sn": {"$push": "$snaplist.snap"}}}]
+for key in origin:
+    snaplist = origin[key]['snaplist']
+    new_snaplist = [i['snap'] for i in snaplist if i['show'] == 1]
+    all_cfg_dct[key] = {'lang': origin[key]['lang'],
+                        'path': origin[key]['path'],
+                        'snap': sorted(new_snaplist)}
 
+production_lst = list()
 
-for item in db.main.aggregate(pipeline):
-    all_cfg_dct[item["_id"]] = {"lang": item["lang"], "path": item["path"], "snap": sorted(item['sn'])}
+for key in origin:
+    for item in origin[key]['snaplist']:
+        if item['production'] == 1:
+            row_obj = {'vm': key,
+                       'lang': origin[key]['lang'],
+                       'path': origin[key]['path'],
+                       'winver': origin[key]['winver'],
+                       'snaplist': item}
+            production_lst.append(row_obj)
 
-# production = 1
-pipeline = [{"$unwind": {"path": "$snaplist"}},
-            {"$match": {"snaplist.production": 1}}]
-production_lst = list(db.main.aggregate(pipeline))
+# pprint.pprint(production_lst)
 
-
-# where find setups
-collection = db.prod_dirs
-
-all_prod_dirs = collection.find_one()['dirs']
+with open(r'cfg\prod_dirs.json') as fi:
+    all_prod_dirs = json.load(fi)
 
 ##############################  end mongo  ##########################################
 
@@ -108,7 +108,6 @@ def make_xls(params):
         for item in selected:
             result.append((_setup,  item['vm'], item['path'],  item['snaplist']['snap'], '0'))
 
-    job_file = r'e:\Testing\VMWare\VM-Monitor.Jobs.xls'
     if os.path.exists(job_file):
         os.remove(job_file)
     pythoncom.CoInitialize()
@@ -154,7 +153,10 @@ def ping_pong():
 
 
 @app.route('/api/cfg', methods=['GET'])
-def all_books():
+def find_busy():
+    with open(r'c:\production_svelte\server_new\cfg\busy_vm.json') as fi:
+        busy_list = json.load(fi)
+
     cfg = dict()
 
     for _vm in all_cfg_dct:
@@ -167,6 +169,9 @@ def all_books():
             print(e)
             print(cfg[_vm]['path'])
             sys.exit(1)
+        if _vm in busy_list:
+            cfg[_vm]['status'] = 'busy'
+            continue
         if vm.is_running:
             cfg[_vm]['status'] = 'busy'
         else:
