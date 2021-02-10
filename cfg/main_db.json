@@ -101,19 +101,13 @@
         "prefix": "CFW-"
       },
       {
-        "snap": "SW 2020 SP1.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "SW 2020 SP2.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
         "snap": "SW 2020 SP3.0",
+        "production": 0,
+        "show": 1,
+        "prefix": "CFW-"
+      },
+      {
+        "snap": "SW 2021 SP1.0",
         "production": 0,
         "show": 1,
         "prefix": "CFW-"
@@ -266,6 +260,12 @@
       },
       {
         "snap": "SW 2020 SP3.0",
+        "production": 0,
+        "show": 1,
+        "prefix": "CFW-"
+      },
+      {
+        "snap": "SW 2021 SP1.0",
         "production": 1,
         "show": 1,
         "prefix": "CFW-"
@@ -363,6 +363,12 @@
       },
       {
         "snap": "SW 2020 SP3.0",
+        "production": 0,
+        "show": 1,
+        "prefix": "CFW-"
+      },
+      {
+        "snap": "SW 2021 SP1.0",
         "production": 1,
         "show": 1,
         "prefix": "CFW-"
@@ -466,7 +472,7 @@
       },
       {
         "snap": "SW 2020 SP3.0",
-        "production": 1,
+        "production": 0,
         "show": 1,
         "prefix": "CFW-"
       },
@@ -599,7 +605,7 @@
       },
       {
         "snap": "SW 2020 SP3.0",
-        "production": 1,
+        "production": 0,
         "show": 1,
         "prefix": "CFW-"
       },
@@ -702,7 +708,7 @@
       },
       {
         "snap": "SW 2020 SP2.0",
-        "production": 1,
+        "production": 0,
         "show": 1,
         "prefix": "CFW-"
       },
@@ -725,120 +731,25 @@
     "lang": "Russian",
     "winver": "7",
     "snaplist": [
-      {
-        "snap": "Catia R21",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R22",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R24",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R27",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R28",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Creo 2.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "Creo 3.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "Creo 5.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "Creo 6.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "NX 11.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "NX 12.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "NX 1899-v1915",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "Office 2010",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.LAB-"
-      },
-      {
-        "snap": "SW 2019 SP3.0",
-        "production": 0,
-        "show": 0,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "SW 2020 SP1.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "SW 2020 SP2.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "SW 2020 SP3.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "Solid Edge 2019",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.SE-"
-      },
-      {
-        "snap": "Solid Edge ST10",
-        "production": 0,
-        "show": 0,
-        "prefix": "EFD.SE-"
-      }
+      { "snap": "Catia R21",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R22",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R24",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R27",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R28",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Creo 2.0",        "production": 1, "show": 1, "prefix": "EFD.PRO-" },
+      { "snap": "Creo 3.0",        "production": 1, "show": 1, "prefix": "EFD.PRO-" },
+      { "snap": "Creo 5.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+      { "snap": "Creo 6.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+      { "snap": "NX 11.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "NX 12.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "NX 1899-v1915",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "Office 2010",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
+      { "snap": "SW 2019 SP3.0",   "production": 0, "show": 0, "prefix": "CFW-" },
+      { "snap": "SW 2020 SP1.0",   "production": 0, "show": 1, "prefix": "CFW-" },
+      { "snap": "SW 2020 SP2.0",   "production": 0, "show": 1, "prefix": "CFW-" },
+      { "snap": "SW 2020 SP3.0",   "production": 0, "show": 1, "prefix": "CFW-" },
+      { "snap": "Solid Edge 2019", "production": 1, "show": 1, "prefix": "EFD.SE-" },
+      { "snap": "Solid Edge ST10", "production": 0, "show": 0, "prefix": "EFD.SE-" }
     ]
   },
   "Windows 10 x64 Jap": {
@@ -846,48 +757,15 @@
     "lang": "Japanese",
     "winver": "10",
     "snaplist": [
-      {
-        "snap": "Creo 2.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "Creo 3.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "Office 2013",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.LAB-"
-      },
-      {
-        "snap": "SW 2020 SP2.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "SW 2020 SP3.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "Solid Edge 2019",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.SE-"
-      },
-      {
-        "snap": "NX 1899-v1915",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      }
+      { "snap": "Creo 2.0",        "production": 1, "show": 1, "prefix": "EFD.PRO-"  },
+      { "snap": "Creo 3.0",        "production": 1, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "NX 9.0",          "production": 1, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 11.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "Office 2013",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
+      { "snap": "SW 2020 SP3.0",   "production": 0, "show": 1, "prefix": "CFW-" },
+      { "snap": "SW 2021 SP1.0",   "production": 1, "show": 1, "prefix": "CFW-" },
+      { "snap": "Solid Edge 2019", "production": 1, "show": 1, "prefix": "EFD.SE-" },
+      { "snap": "NX 1899-v1915",   "production": 0, "show": 1, "prefix": "EFD.NX-" }
     ]
   },
   "Windows Server 2012 R2": {
@@ -895,12 +773,7 @@
     "lang": "English",
     "winver": "",
     "snaplist": [
-      {
-        "snap": "Clear",
-        "production": 0,
-        "show": 1,
-        "prefix": "-"
-      }
+      { "snap": "Clear", "production": 0, "show": 1, "prefix": "-" }
     ]
   },
   "TC1123": {
@@ -908,12 +781,7 @@
     "lang": "English",
     "winver": "",
     "snaplist": [
-      {
-        "snap": "08.10.2019",
-        "production": 0,
-        "show": 1,
-        "prefix": "-"
-      }
+      { "snap": "08.10.2019", "production": 0, "show": 1, "prefix": "-" }
     ]
   },
   "Windows Server 2016": {
@@ -921,12 +789,7 @@
     "lang": "English",
     "winver": "",
     "snaplist": [
-      {
-        "snap": "Clear",
-        "production": 0,
-        "show": 1,
-        "prefix": "-"
-      }
+      { "snap": "Clear", "production": 0, "show": 1, "prefix": "-" }
     ]
   },
   "Windows 7 x64 Italian": {
@@ -934,90 +797,19 @@
     "lang": "Italian",
     "winver": "7",
     "snaplist": [
-      {
-        "snap": "Catia R19",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R23",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R25",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R27",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Creo 3.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "NX 10.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "NX 9.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "NX 1899-v1915",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "Office 2007",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.LAB-"
-      },
-      {
-        "snap": "SW 2019 SP3.0",
-        "production": 0,
-        "show": 0,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "SW 2020 SP1.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "SW 2020 SP2.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "Solid Edge 2019",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.SE-"
-      },
-      {
-        "snap": "Solid Edge ST10",
-        "production": 0,
-        "show": 0,
-        "prefix": "EFD.SE-"
-      }
+      { "snap": "Catia R19",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R23",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R25",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R27",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Creo 3.0",        "production": 1, "show": 1, "prefix": "EFD.PRO-" },
+      { "snap": "NX 10.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "NX 9.0",          "production": 1, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "NX 1899-v1915",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "Office 2007",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
+      { "snap": "SW 2020 SP1.0",   "production": 0, "show": 1, "prefix": "CFW-" },
+      { "snap": "SW 2020 SP2.0",   "production": 0, "show": 1, "prefix": "CFW-"  },
+      { "snap": "Solid Edge 2019", "production": 1, "show": 1, "prefix": "EFD.SE-" },
+      { "snap": "Solid Edge ST10", "production": 0, "show": 0, "prefix": "EFD.SE-" }
     ]
   },
   "Windows 7 x64 Jap new": {
@@ -1025,120 +817,25 @@
     "lang": "Japanese",
     "winver": "7",
     "snaplist": [
-      {
-        "snap": "Catia R19",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R22",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R24",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R25",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Catia R28",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.V5-"
-      },
-      {
-        "snap": "Creo 2.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "Creo 3.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "Creo 4.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.PRO-"
-      },
-      {
-        "snap": "NX 11.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "NX 12.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "NX 8.5",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "NX 9.0",
-        "production": 1,
-        "show": 1,
-        "prefix": "EFD.NX-"
-      },
-      {
-        "snap": "Office 2010",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.LAB-"
-      },
-      {
-        "snap": "SW 2019 SP3.0",
-        "production": 0,
-        "show": 0,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "SW 2020 SP1.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "SW 2020 SP2.0",
-        "production": 0,
-        "show": 1,
-        "prefix": "CFW-"
-      },
-      {
-        "snap": "Solid Edge 2019",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.SE-"
-      },
-      {
-        "snap": "Solid Edge 2020",
-        "production": 0,
-        "show": 1,
-        "prefix": "EFD.SE-"
-      },
-      {
-        "snap": "Solid Edge ST10",
-        "production": 0,
-        "show": 0,
-        "prefix": "EFD.SE-"
-      }
+      { "snap": "Catia R19",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R22",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R24",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R25",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R28",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Creo 2.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+      { "snap": "Creo 3.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+      { "snap": "Creo 4.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+      { "snap": "NX 11.0",         "production": 0, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "NX 12.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "NX 8.5",          "production": 1, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "NX 9.0",          "production": 0, "show": 1, "prefix": "EFD.NX-" },
+      { "snap": "Office 2010",     "production": 0, "show": 1, "prefix": "EFD.LAB-" },
+      { "snap": "SW 2019 SP3.0",   "production": 0, "show": 0, "prefix": "CFW-" },
+      { "snap": "SW 2020 SP1.0",   "production": 0, "show": 1, "prefix": "CFW-" },
+      { "snap": "SW 2020 SP2.0",   "production": 0, "show": 1, "prefix": "CFW-" },
+      { "snap": "Solid Edge 2019", "production": 0, "show": 1, "prefix": "EFD.SE-" },
+      { "snap": "Solid Edge 2020", "production": 0, "show": 1, "prefix": "EFD.SE-" },
+      { "snap": "Solid Edge ST10", "production": 0, "show": 0, "prefix": "EFD.SE-" }
     ]
   }
 }
