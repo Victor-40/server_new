@@ -154,9 +154,9 @@
       { "snap": "NX 9.0",          "production": 1, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "NX 1899-v1915",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "Office 2010",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
-      { "snap": "SW 2019 SP3.0",   "production": 0, "show": 0, "prefix": "CFW-" },
       { "snap": "SW 2020 SP1.0",   "production": 0, "show": 1, "prefix": "CFW-" },
       { "snap": "SW 2020 SP2.0",   "production": 0, "show": 1, "prefix": "CFW-" },
+	  { "snap": "SW 2020 SP3.0",   "production": 0, "show": 1, "prefix": "CFW-" },
       { "snap": "Solid Edge 2019", "production": 1, "show": 1, "prefix": "EFD.SE-" },
       { "snap": "Solid Edge ST10", "production": 0, "show": 0, "prefix": "EFD.SE-" }
     ]
@@ -243,6 +243,7 @@
       { "snap": "Office 2007",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
       { "snap": "SW 2020 SP1.0",   "production": 0, "show": 1, "prefix": "CFW-" },
       { "snap": "SW 2020 SP2.0",   "production": 0, "show": 1, "prefix": "CFW-"  },
+	  { "snap": "SW 2020 SP3.0",   "production": 0, "show": 1, "prefix": "CFW-"  },
       { "snap": "Solid Edge 2019", "production": 1, "show": 1, "prefix": "EFD.SE-" },
       { "snap": "Solid Edge ST10", "production": 0, "show": 0, "prefix": "EFD.SE-" }
     ]
