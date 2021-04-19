@@ -26,7 +26,7 @@ root_nv = r'\\svr-rum-net-04\new_versions'
 root_host_test = r'e:\Testing\Test-1'
 root_guest_test = r'c:\Test'
 root_report = r'\\rum-cherezov-dt\!Reports'
-job_file = r'e:\Testing\VMWare\VM-Monitor.Jobs.xls'
+job_file = r'e:\Testing_JS\VMWare.JS\VM-Monitor.Jobs.xls'
 
 all_cfg_dct = dict()
 
