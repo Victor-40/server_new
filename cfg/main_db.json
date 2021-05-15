@@ -4,25 +4,42 @@
     "lang": "English",
     "winver": "10",
     "snaplist": [
-      { "snap": "Catia R24",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+      { "snap": "Catia R19",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R20",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R21",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R22",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R23",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R24",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
       { "snap": "Catia R25",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
       { "snap": "Catia R26",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
       { "snap": "Catia R27",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R28",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
       { "snap": "Catia R29",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
       { "snap": "Catia R30",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
       { "snap": "Creo 2.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
       { "snap": "Creo 3.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "Creo 4.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "Creo 5.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
       { "snap": "Creo 6.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "Creo 7.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "NX 9.0",          "production": 0, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "NX 10.0",         "production": 0, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "NX 11.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "NX 12.0",         "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1847-v1867",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1872-v1892",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "NX 1899-v1903",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "NX 1926-v1934",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1953-v1965",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "Office 2013",     "production": 0, "show": 1, "prefix": "EFD.LAB-" },
-      { "snap": "SW 2021 SP1.0",   "production": 0, "show": 1, "prefix": "CFW-" },
-      { "snap": "Solid Edge 2019", "production": 1, "show": 1, "prefix": "EFD.SE-" },
+	  { "snap": "Simcenter 2019.2-v1892", "production": 0, "show": 1, "prefix": "EFD.SC-" },
+	  { "snap": "Simcenter 2020.1-v1919", "production": 0, "show": 1, "prefix": "EFD.SC-" },
+	  { "snap": "Simcenter 2020.2-v1946", "production": 0, "show": 1, "prefix": "EFD.SC-" },
+	  { "snap": "Simcenter 2021.1-v1961", "production": 0, "show": 1, "prefix": "EFD.SC-" },
+      { "snap": "Solid Edge 2019", "production": 0, "show": 1, "prefix": "EFD.SE-" },
       { "snap": "Solid Edge 2020", "production": 0, "show": 1, "prefix": "EFD.SE-" },
-      { "snap": "Solid Edge 2021", "production": 0, "show": 1, "prefix": "EFD.SE-" }    
+      { "snap": "Solid Edge 2021", "production": 0, "show": 1, "prefix": "EFD.SE-" },  
+      { "snap": "SW 2021 SP3.0",   "production": 0, "show": 1, "prefix": "CFW-" }
     ]
   },
   "Windows 10 x64-1": {
@@ -30,20 +47,83 @@
     "lang": "English",
     "winver": "10",
     "snaplist": [
-      { "snap": "Creo 2.0",        "production": 0, "show": 0, "prefix": "EFD.PRO-" },
+      { "snap": "Catia R19",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R20",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R21",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R22",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R23",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R24",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R25",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R26",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R27",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R28",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R29",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R30",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Creo 2.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+      { "snap": "Creo 3.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "Creo 4.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "Creo 5.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "Creo 6.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "Creo 7.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "NX 10.0",         "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 11.0",         "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 12.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1847-v1867",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1872-v1892",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1899-v1915",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1926-v1934",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1953-v1965",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "Office 2013",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
+	  { "snap": "Solid Edge 2019", "production": 0, "show": 1, "prefix": "EFD.SE-" },
+	  { "snap": "Solid Edge 2020", "production": 1, "show": 1, "prefix": "EFD.SE-" },
+	  { "snap": "Solid Edge 2021", "production": 1, "show": 1, "prefix": "EFD.SE-" },
+	  { "snap": "Solid Edge 2022", "production": 0, "show": 1, "prefix": "EFD.SE-" },	  
+      { "snap": "SW 2021 SP3.0",   "production": 1, "show": 1, "prefix": "CFW-" }
+    ]
+  },
+  "Windows 10 x64-2": {
+    "path": "e:\\Images\\Windows 10 x64-2\\Windows 10 x64-2.vmx",
+    "lang": "English",
+    "winver": "10",
+    "snaplist": [
+      { "snap": "Catia R19",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R20",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R21",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R22",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R23",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R24",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R25",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R26",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R27",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R28",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R29",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Catia R30",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
+	  { "snap": "Creo 2.0",        "production": 0, "show": 0, "prefix": "EFD.PRO-" },
       { "snap": "Creo 3.0",        "production": 0, "show": 0, "prefix": "EFD.PRO-" },
+	  { "snap": "Creo 4.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
+	  { "snap": "Creo 5.0",        "production": 0, "show": 1, "prefix": "EFD.PRO-" },
 	  { "snap": "Creo 6.0",        "production": 0, "show": 0, "prefix": "EFD.PRO-" },
-	  { "snap": "Catia R26",       "production": 1, "show": 0, "prefix": "EFD.V5-" },
-	  { "snap": "Catia R28",       "production": 1, "show": 0, "prefix": "EFD.V5-" },
+	  { "snap": "Creo 7.0",        "production": 0, "show": 0, "prefix": "EFD.PRO-" },
+      { "snap": "NX 9.0",          "production": 0, "show": 0, "prefix": "EFD.NX-" },
 	  { "snap": "NX 10.0",         "production": 0, "show": 0, "prefix": "EFD.NX-" },
+	  { "snap": "NX 11.0",         "production": 0, "show": 0, "prefix": "EFD.NX-" },
 	  { "snap": "NX 12.0",         "production": 1, "show": 0, "prefix": "EFD.NX-" },
-	  { "snap": "Office 2013",     "production": 1, "show": 0, "prefix": "EFD.LAB-" },
-	  { "snap": "Solid Edge 2021", "production": 1, "show": 0, "prefix": "EFD.SE-" },	  
-      { "snap": "SW 2021 SP1.0",   "production": 1, "show": 0, "prefix": "CFW-" }
+	  { "snap": "NX 1847-v1867",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1872-v1892",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1899-v1915",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1926-v1934",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "NX 1953-v1965",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
+	  { "snap": "Office 2013",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
+      { "snap": "Simcenter 2019.2-v1892", "production": 0, "show": 0, "prefix": "EFD.SC-" },
+      { "snap": "Simcenter 2020.1-v1919", "production": 0, "show": 0, "prefix": "EFD.SC-" },
+	  { "snap": "Solid Edge 2019", "production": 0, "show": 1, "prefix": "EFD.SE-" },
+      { "snap": "Solid Edge 2020", "production": 1, "show": 0, "prefix": "EFD.SE-" },
+	  { "snap": "Solid Edge 2021", "production": 1, "show": 0, "prefix": "EFD.SE-" },
+      { "snap": "Solid Edge 2022", "production": 1, "show": 0, "prefix": "EFD.SE-" }
     ]
   },
   "Windows 10 x64 German": {
-    "path": "e:\\Images\\Windows 10 x64 German\\Windows 10 x64 German.vmx",
+    "path": "f:\\Images\\Windows 10 x64 German\\Windows 10 x64 German.vmx",
     "lang": "German",
     "winver": "10",
     "snaplist": [
@@ -59,13 +139,13 @@
       { "snap": "NX 12.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
 	  { "snap": "NX 1899-v1915",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "Office 2013",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
-      { "snap": "SW 2021 SP1.0",   "production": 1, "show": 1, "prefix": "CFW-" },
+      { "snap": "SW 2021 SP3.0",   "production": 1, "show": 1, "prefix": "CFW-" },
       { "snap": "Solid Edge 2019", "production": 1, "show": 1, "prefix": "EFD.SE-" },
       { "snap": "Solid Edge 2021", "production": 0, "show": 1, "prefix": "EFD.SE-" }    
     ]
   },
   "Windows 10 x64 Turkish": {
-    "path": "e:\\Images\\Windows 10 x64 Turkish\\Windows 10 x64 Turkish.vmx",
+    "path": "f:\\Images\\Windows 10 x64 Turkish\\Windows 10 x64 Turkish.vmx",
     "lang": "Turkish",
     "winver": "10",
     "snaplist": [
@@ -76,12 +156,12 @@
       { "snap": "NX 12.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "NX 1899-v1915",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "Office 2013",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
-      { "snap": "SW 2021 SP1.0",   "production": 1, "show": 1, "prefix": "CFW-" },
+      { "snap": "SW 2021 SP3.0",   "production": 1, "show": 1, "prefix": "CFW-" },
       { "snap": "Solid Edge 2019", "production": 1, "show": 1, "prefix": "EFD.SE-" }
     ]
   },
   "Windows 10 x64 Rus": {
-    "path": "e:\\Images\\Windows 10 x64 Rus\\Windows 10 x64 Rus.vmx",
+    "path": "f:\\Images\\Windows 10 x64 Rus\\Windows 10 x64 Rus.vmx",
     "lang": "Russian",
     "winver": "10",
     "snaplist": [
@@ -98,8 +178,9 @@
       { "snap": "NX 12.0",         "production": 1, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "NX 1899-v1915",   "production": 0, "show": 1, "prefix": "EFD.NX-" },
       { "snap": "Office 2013",     "production": 1, "show": 1, "prefix": "EFD.LAB-" },
-      { "snap": "SW 2021 SP1.0",   "production": 1, "show": 1, "prefix": "CFW-" },
-      { "snap": "Solid Edge 2019", "production": 1, "show": 1, "prefix": "EFD.SE-" }
+      { "snap": "SW 2021 SP3.0",   "production": 1, "show": 1, "prefix": "CFW-" },
+      { "snap": "Solid Edge 2019", "production": 0, "show": 1, "prefix": "EFD.SE-" },
+	  { "snap": "Solid Edge 2020", "production": 1, "show": 1, "prefix": "EFD.SE-" }
     ]
   },
   "Windows 7 x64": {
@@ -201,7 +282,7 @@
     ]
   },
   "Windows Server 2012 R2": {
-    "path": "E:\\Images\\Windows Server 2012\\Windows Server 2012 R2.vmx",
+    "path": "f:\\Images\\Windows Server 2012\\Windows Server 2012 R2.vmx",
     "lang": "English",
     "winver": "",
     "snaplist": [
@@ -209,7 +290,7 @@
     ]
   },
   "TC1123": {
-    "path": "E:\\Images\\TC1123\\TC1123.vmx",
+    "path": "f:\\Images\\TC1123\\TC1123.vmx",
     "lang": "English",
     "winver": "",
     "snaplist": [
