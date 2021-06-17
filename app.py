@@ -34,23 +34,31 @@ with open(r'c:\production_svelte\server_new\cfg\main_db.json') as fi:
     origin = json.load(fi)
 
 for key in origin:
-    snaplist = origin[key]['snaplist']
-    new_snaplist = [i['snap'] for i in snaplist if i['show'] == 1]
+    cad_family = origin[key]['cad_family']
+    # pprint.pprint(cad_family)
+    cad_family_new = dict()
+    for cad in cad_family:
+        cad_family_new[cad] = [i['snap'] for i in cad_family[cad] if i['show'] == 1]
+
+    # pprint.pprint(cad_family_new)
+
     all_cfg_dct[key] = {'lang': origin[key]['lang'],
                         'path': origin[key]['path'],
-                        'snap': sorted(new_snaplist)}
+                        'cad_family': cad_family_new}
 
 production_lst = list()
 
-for key in origin:
-    for item in origin[key]['snaplist']:
-        if item['production'] == 1:
-            row_obj = {'vm': key,
-                       'lang': origin[key]['lang'],
-                       'path': origin[key]['path'],
-                       'winver': origin[key]['winver'],
-                       'snaplist': item}
-            production_lst.append(row_obj)
+for vm in origin:
+    for cad in origin[vm]['cad_family']:
+        for item in origin[vm]['cad_family'][cad]:
+            if item['production'] == 1:
+                row_obj = {
+                    'vm': vm,
+                    'lang': origin[vm]['lang'],
+                    'path': origin[vm]['path'],
+                    'winver': origin[vm]['winver'],
+                    'snaplist': item}
+                production_lst.append(row_obj)
 
 # pprint.pprint(production_lst)
 
@@ -160,7 +168,7 @@ def find_busy():
     cfg = dict()
 
     for _vm in all_cfg_dct:
-        cfg[_vm] = {'path': all_cfg_dct[_vm]['path'], 'snap': all_cfg_dct[_vm]['snap']}
+        cfg[_vm] = {'path': all_cfg_dct[_vm]['path'], "cad_family": all_cfg_dct[_vm]['cad_family']}
 
     for _vm in cfg:
         try:
