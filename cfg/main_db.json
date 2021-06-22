@@ -371,7 +371,6 @@
 	"win_name": "vm-win7-ita",
     "cad_family": {
 		 "Catia": [
-			  { "snap": "Catia R19",       "production": 0, "show": 0, "prefix": "EFD.V5-" },
 			  { "snap": "Catia R23",       "production": 0, "show": 1, "prefix": "EFD.V5-" },
 			  { "snap": "Catia R25",       "production": 1, "show": 1, "prefix": "EFD.V5-" },
 			  { "snap": "Catia R27",       "production": 1, "show": 1, "prefix": "EFD.V5-" }
@@ -380,8 +379,7 @@
 			{ "snap": "Creo 3.0",        			"production": 0, "show": 1, "prefix": "EFD.PRO-" }
 			],
 		 "NX": [
-			{ "snap": "NX 9.0",          			"production": 0, "show": 1, "prefix": "EFD.NX-" },
-			{ "snap": "NX 11.0",         			"production": 1, "show": 1, "prefix": "EFD.NX-" },
+			{ "snap": "NX 10.0",         			"production": 0, "show": 1, "prefix": "EFD.NX-" },
 			{ "snap": "NX 1899-v1915",   			"production": 0, "show": 1, "prefix": "EFD.NX-" }
 			],
 		 "Solid Edge": [
